@@ -158,7 +158,7 @@
     </span>
     right away <span class="emoji">🚀</span>
   </p>
-   <p class="info-link-text"> 📢Advertise by <a href="https://t.me/+2brlAMzDH7EyNDVl" class="avitor-link avitor-icon-link" target="_blank" rel="noopener noreferrer"> <img src="" class="user-icon" alt=""> <strong>EVOLUTION DIGITAL MARKETING™</strong> </a>
+   <p class="info-link-text"> 📢Advertise by <a href="https://t.me/IDF24" class="avitor-link avitor-icon-link" target="_blank" rel="noopener noreferrer"> <img src="" class="user-icon" alt=""> <strong>EVOLUTION DIGITAL MARKETING™</strong> </a>
 
   <script src="js/ionicons.js"></script>
 
@@ -188,17 +188,11 @@
     }
   </script>
 
-  <script>
-    function trackSubscribe() {
-      if (localStorage.getItem('subscribed') === 'true') {
-        console.log("Already subscribed event fired, not sending again.");
-        return;
-      }
-      const eventId = 'subscribe_' + Date.now();
-      fbq('trackCustom', 'Subscribe', {}, { eventID: eventId });
-      localStorage.setItem('subscribed', 'true');
-    }
-  </script>
+     <script>
+        function trackSubscribe() {
+            fbq('track', 'Subscribe');
+        }
+    </script>
 
 
 </body>
