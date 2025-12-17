@@ -186,13 +186,17 @@
         panel.style.display = panel.style.display === "block" ? "none" : "block";
       });
     }
+  <script>
+    function trackSubscribe() {
+      if (localStorage.getItem('subscribed') === 'true') {
+        console.log("Already subscribed event fired, not sending again.");
+        return;
+      }
+      const eventId = 'subscribe_' + Date.now();
+      fbq('trackCustom', 'Subscribe', {}, { eventID: eventId });
+      localStorage.setItem('subscribed', 'true');
+    }
   </script>
-
-     <script>
-        function trackSubscribe() {
-            fbq('track', 'Subscribe');
-        }
-    </script>
 
 
 </body>
